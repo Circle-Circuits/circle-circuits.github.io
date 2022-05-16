@@ -1,0 +1,29 @@
+{
+  "name": "Circle Circuits",
+  "version": "1.0.0",
+  "description": "Circle Circuits landing page.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Circle-Circuits/circle-circuits.github.io.git"
+  },
+  "author": "Circle Circuits <info@circlecircuits.com>",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Circle-Circuits/circle-circuits.github.io.git/issues"
+  },
+  "homepage": "https://www.circlecircuits.com",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.10.2"
+  }
+}
