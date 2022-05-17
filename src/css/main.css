@@ -32,6 +32,10 @@ p {
   font-size: 1.3em;
 }
 
+#introduction img {
+  width: 500px;
+}
+
 a, a:active {
       display: inline-block;
       text-decoration: none;

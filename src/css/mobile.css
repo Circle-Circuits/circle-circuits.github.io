@@ -49,6 +49,10 @@
   	bottom: 0;
 	}
 
+	#introduction img {
+	  width: 100%;
+	}
+
 	#triangle-right {
 		margin-left: 5px;
 		border-top: 8px solid transparent;
