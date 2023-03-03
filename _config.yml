@@ -36,12 +36,15 @@ plugins:
 
 defaults:
   - scope:
-      path: "img"
+      path: "assets/img"
     values:
       image: true
 
 collections:
   pedals:
+    output: true
+    permalink: /:collection/:name
+  manuals:
     output: true
     permalink: /:collection/:name
 

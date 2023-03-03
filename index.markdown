@@ -2,4 +2,4 @@
 layout: home
 ---
 
-<img src="/img/logo.png" width="80%" />
+<img src="assets/img/logo.png" width="80%" />
