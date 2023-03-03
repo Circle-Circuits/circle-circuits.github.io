@@ -7,11 +7,14 @@
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      {{ content }}
+      <div style="text-align: center; margin-top:20%;">
+        {{ content }}
+      </div>
+      <br />
+      <p>{{ site.description }}</p>
+      {%- include social.html -%}
     </div>
   </main>
-
-  {%- include footer.html -%}
 
 </body>
 

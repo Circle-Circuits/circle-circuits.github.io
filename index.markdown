@@ -2,4 +2,4 @@
 layout: home
 ---
 
-![My helpful screenshot](/img/logo.png)
+<img src="/img/logo.png" width="80%" />
