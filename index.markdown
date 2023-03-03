@@ -10,7 +10,7 @@ layout: home
 
 {% for manual in site.manuals %}
 <p>
-    <a href="{{ manual.url }}">
+    <a href="{{ manual.asset }}.pdf">
       {{ manual.title }}
     </a>
 </p>
