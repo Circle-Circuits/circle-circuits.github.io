@@ -17,11 +17,21 @@ layout: home
   <a href='{{ page.url }}'>{{ page.title }}</a>
 {%- endfor -%}
 
-{%- assign first_post = site.posts | first -%}
-{%- if first_post.title -%}
+{%- assign first_item = site.posts | first -%}
+{%- if first_item.title -%}
   <br /><br />
   <h3>✍️ Posts</h3>
   {%- for post in site.posts -%}
     <a href='{{ post.url }}'>{{ post.title }}</a>
+  {%- endfor -%}
+{%- endif -%}
+
+{%- assign circuits_pages = site.pages | where_exp: "item", "item.path contains 'circuits'" -%}
+{%- assign first_item = circuits_pages | first -%}
+{%- if first_item.title -%}
+  <br /><br />
+  <h3>👨🏻‍🏭 Circuits</h3>
+  {%- for page in circuits_pages -%}
+    <a href='{{ page.url }}'>{{ page.title }}</a>
   {%- endfor -%}
 {%- endif -%}
