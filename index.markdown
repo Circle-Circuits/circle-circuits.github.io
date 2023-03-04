@@ -8,12 +8,11 @@ layout: home
 <br />
 <p>{{ site.description }}</p>
 
-{% for manual in site.manuals %}
-<p>
-    <a href="{{ manual.asset }}.pdf">
-      {{ manual.title }}
-    </a>
-</p>
-{% endfor %}
+<p>Find me on <a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}">Instragram</a>.</p>
 
-{%- include social.html -%}
+<br /><br />
+<h3>Manuals 📚</h3>
+{%- assign manuals_pages = site.pages | where_exp: "item", "item.path contains 'manuals'" -%}
+{%- for page in manuals_pages -%}
+  <a href='{{ page.url }}'>{{ page.title }}</a>
+{%- endfor -%}
