@@ -1,0 +1,3 @@
+[submodule "open-circuits"]
+	path = open-circuits
+	url = https://github.com/Circle-Circuits/open-circuits.git
