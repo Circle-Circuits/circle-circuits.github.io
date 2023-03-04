@@ -47,9 +47,6 @@ collections:
   manuals:
     output: true
     permalink: /:collection/:name
-  circuits:
-    output: true
-    permalink: /:collection/:name
 
 # Exclude from processing.
 # The following items will not be processed, by default.
