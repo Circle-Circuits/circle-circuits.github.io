@@ -30,8 +30,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Import submodules
-        run: cp -a ./open-circuits/open-circuits/. ./_circuits/
-        
+        run: cp -a ./open-circuits/. ./_circuits/
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
