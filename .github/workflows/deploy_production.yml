@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Import submodules
         run: find open-circuits; cp -a ./open-circuits/. ./_circuits/; find _circuits
