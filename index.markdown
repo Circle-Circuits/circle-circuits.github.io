@@ -16,4 +16,12 @@ layout: home
 </p>
 {% endfor %}
 
+{% for circuit in site.circuits %}
+<p>
+    <a href="{{ circuit.url }}.pdf">
+      {{ circuit.name }}
+    </a>
+</p>
+{% endfor %}
+
 {%- include social.html -%}
