@@ -40,6 +40,8 @@ defaults:
     values:
       image: true
 
+permalink: /:path/:name
+
 collections:
   pedals:
     output: true
