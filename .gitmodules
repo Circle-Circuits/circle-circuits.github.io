@@ -1,3 +1,6 @@
 [submodule "open-circuits"]
 	path = open-circuits
 	url = https://github.com/Circle-Circuits/open-circuits.git
+[submodule "manuals"]
+	path = manuals
+	url = https://github.com/Circle-Circuits/manuals.git
