@@ -31,7 +31,10 @@ jobs:
           token: ${{ secrets.CC_DEPLOY_TOKEN }}
           submodules: recursive
 
-      - name: Import submodules
+      - name: update submodules
+        run: git submodule update --init --recursive
+
+      - name: Export submodules content
         run: mv ./open-circuits ./circuits; find circuits
 
       - name: Setup Pages
