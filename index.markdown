@@ -23,6 +23,7 @@ layout: home
   <h3>✍️ Posts</h3>
   {%- for post in site.posts -%}
     <a href='{{ post.url }}'>{{ post.title }}</a>
+    <br />
   {%- endfor -%}
 {%- endif -%}
 
@@ -33,5 +34,6 @@ layout: home
   <h3>👨🏻‍🏭 Circuits</h3>
   {%- for page in circuits_pages -%}
     <a href='{{ page.url }}'>{{ page.title }}</a>
+    <br />
   {%- endfor -%}
 {%- endif -%}
