@@ -1,0 +1,20 @@
+version: 2
+
+registries:
+  submodules:
+    type: git
+    url: https://github.com
+    username: x-access-token
+    password: ${{ secrets.READ_SUBMODULES }}
+
+updates:
+  - package-ecosystem: gitsubmodule
+    directory: "/" 
+    registries: "*"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
