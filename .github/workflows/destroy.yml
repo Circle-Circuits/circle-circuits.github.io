@@ -1,0 +1,35 @@
+name: Destroy staging
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: "destroy"
+  cancel-in-progress: true
+
+jobs:
+  destroy:
+    if: github.repository == 'Circle-Circuits/_staging'
+    name: Cleanup staging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
+          role-duration-seconds: 900
+          role-session-name: GithubActionStaging
+          
+      - name: Empty S3 bucket
+        run: |
+          aws s3 rm ${{ secrets.S3_BUCKET }} --recursive
