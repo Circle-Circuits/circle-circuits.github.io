@@ -34,7 +34,7 @@ jobs:
           git submodule update --recursive --remote
 
       - name: import assets from submodules
-        run: cp -a _posts/assets/. assets
+        run: cp -a _posts/assets  _site/
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

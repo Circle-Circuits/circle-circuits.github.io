@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+<html lang="{{ page.lang | default: site.lang }}">
 
 {%- include head.html -%}
 
 <body>
 
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
+    <div style="margin: 10% auto 40px auto; width:40%;text-align:center">
+      <img src="assets/img/logo.svg" style="color:#ffffff" />
+    </div>
+    <div class="wrapper home">
       {{ content }}
     </div>
   </main>

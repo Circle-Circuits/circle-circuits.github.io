@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: circlecircuits.com
 url: "https://www.circlecircuits.com" # the base hostname & protocol for your site, e.g. http://example.com
+lang: en
 
 #github_username:  Circle-Circuits
 instagram_username: circle.circuits
@@ -45,6 +46,9 @@ defaults:
       layout: post
 
 permalink: none
+
+kramdown:
+  toc_levels: 1..2
 
 exclude:
   - .sass-cache/
