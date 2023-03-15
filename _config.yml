@@ -21,7 +21,7 @@
 title: Circle Circuits
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Original guitar pedals and peculiar builds of popular circuits. Made in Berlin with care. 👨‍🏭🌱♻️
+  Original guitar pedals and peculiar builds of popular circuits. Made in Berlin with care.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: circlecircuits.com
 url: "https://www.circlecircuits.com" # the base hostname & protocol for your site, e.g. http://example.com
