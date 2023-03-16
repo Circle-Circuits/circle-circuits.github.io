@@ -55,6 +55,10 @@
     border-radius: 5px;
     text-align: right;
 
+    .page-link {
+      color: $brand-color;
+    }
+
     label[for="nav-trigger"] {
       display: block;
       float: right;
