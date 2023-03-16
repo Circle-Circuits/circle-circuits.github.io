@@ -203,7 +203,7 @@
   
   }
 
-  .wrapper {
+  .home {
     margin: 0;
     padding: $spacing-unit;
     color: $pcb-silk;
@@ -244,6 +244,15 @@
         padding: 0;
       }
     }
+
+  .site-footer {
+    background-color: transparent;
+  }
+  .site-footer .wrapper {
+    padding: 0;
+    margin: 0;
+    font-size: smaller;
+  }
  }
 
 /**
