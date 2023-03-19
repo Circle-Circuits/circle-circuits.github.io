@@ -2,7 +2,7 @@
 layout: home
 ---
 
-I build circuits and write about it sometimes:
+I build circuits and write about it sometimes.
 <ul>
 {%- for page in site.pages -%}
   {%- if page.title -%}
