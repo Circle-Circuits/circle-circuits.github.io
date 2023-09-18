@@ -67,7 +67,7 @@ jobs:
           name: dist
 
       - name: Prepare and validate artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ${{steps.download.outputs.download-path}}
 
