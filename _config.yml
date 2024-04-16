@@ -45,7 +45,7 @@ defaults:
     values:
       layout: post
 
-permalink: /:categories/:title
+# permalink: /:categories/:title
 
 kramdown:
   toc_levels: 1..2
