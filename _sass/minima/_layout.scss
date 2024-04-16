@@ -55,6 +55,10 @@
     border-radius: 5px;
     text-align: right;
 
+    .page-link {
+      color: $brand-color;
+    }
+
     label[for="nav-trigger"] {
       display: block;
       float: right;
@@ -109,7 +113,7 @@
   background-color: $pcb-green;
   color: $pcb-silk;
   padding-top: $spacing-unit / 2;
-  @include relative-font-size(0.8);
+  @include relative-font-size(0.7);
 
   a {
     color: $pcb-silk;
@@ -137,7 +141,7 @@
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  //padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
@@ -199,7 +203,7 @@
   
   }
 
-  .wrapper {
+  .home {
     margin: 0;
     padding: $spacing-unit;
     color: $pcb-silk;
@@ -208,21 +212,23 @@
     letter-spacing: -0.5px;
 
     ul {
-      line-height: normal;
+      line-height: $spacing-unit;
       list-style-type: circle;
+      list-style-image: url('../../assets/img/copper.svg');
       color: $pcb-copper;
       display: inline-block;
       vertical-align: middle;
+      @include relative-font-size(0.8)
     }
     li {
-      vertical-align: middle;
-      @include relative-font-size(2);
+      padding-top: -3px;
     }
     a {
       display: inline-block;
       vertical-align: middle;
-      @include relative-font-size(0.4);
       color: $pcb-silk;
+      text-indent: $spacing-unit / 4;
+      margin-top: -2px;
     }
    }
 
@@ -240,6 +246,11 @@
         padding: 0;
       }
     }
+
+  .site-footer .wrapper {
+    padding-left: $spacing-unit / 2;
+    margin: 0;
+  }
  }
 
 /**
