@@ -57,6 +57,7 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+  align-self: center;
 }
 
 img:only-child {
@@ -66,10 +67,15 @@ img:only-child {
 
 .img-grid {
   display: flex;
-  flex:initial;
+  flex:inherit;
 
   img {
+    display: block;
     max-width: 98%;
+    padding-left: $spacing-unit / 2;
+  }
+  img:first-child {
+    padding: 0;
   }
 }
 
