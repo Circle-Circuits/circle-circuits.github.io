@@ -1,0 +1,9 @@
+[submodule "circuits"]
+	path = circuits
+	url = https://github.com/Circle-Circuits/circuits.git
+[submodule "manuals"]
+	path = manuals
+	url = https://github.com/Circle-Circuits/manuals.git
+[submodule "_posts"]
+	path = _posts
+	url = https://github.com/Circle-Circuits/_posts.git

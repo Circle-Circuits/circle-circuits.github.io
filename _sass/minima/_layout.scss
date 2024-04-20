@@ -1,0 +1,378 @@
+/**
+ * Site header
+ */
+.site-header {
+  border-bottom: 6px solid $pcb-copper;
+  min-height: $spacing-unit * 1.865;
+  background-color: $pcb-green;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  letter-spacing: -1px;
+  margin: 10px 0;
+  float: left;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+
+.site-nav {
+  float: right;
+  line-height: $base-line-height * $base-font-size * 3.25;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $pcb-silk;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 20px;
+    right: $spacing-unit / 2;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    .page-link {
+      color: $brand-color;
+    }
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $grey-color-dark;
+      }
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  background-color: $pcb-green;
+  color: $pcb-silk;
+  padding-top: $spacing-unit / 2;
+  @include relative-font-size(0.7);
+
+  a {
+    color: $pcb-silk;
+    text-decoration: underline;
+  }
+}
+
+.footer-heading {
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.footer-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  //padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+  .footer-col-1,
+  .footer-col-2 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+/**
+ * Home page
+ */
+
+ #home-body {
+  background-color: $brand-color;
+
+  .page-content {
+    display: flex;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+    #logo {
+      margin:  -4% 0 0 4%;
+      width:40%;
+      text-align:center;
+    }
+  
+  }
+
+  .home {
+    margin: 0;
+    padding: $spacing-unit;
+    color: $pcb-silk;
+    font-family: $circuit-font-family;
+    @include relative-font-size(0.9);
+    letter-spacing: -0.5px;
+
+    ul {
+      line-height: $spacing-unit;
+      list-style-type: circle;
+      list-style-image: url('../../assets/img/copper.svg');
+      color: $pcb-copper;
+      display: inline-block;
+      vertical-align: middle;
+      @include relative-font-size(0.8)
+    }
+    li {
+      padding-top: -3px;
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      color: $pcb-silk;
+      text-indent: $spacing-unit / 4;
+      margin-top: -2px;
+    }
+   }
+
+   @include media-query($on-palm) {
+    .page-content {
+      display: block;
+
+      #logo {
+        margin: 0;
+        width: 100%;
+        }
+      }
+
+      .wrapper {
+        padding: 0;
+      }
+    }
+
+  .site-footer .wrapper {
+    padding-left: $spacing-unit / 2;
+    margin: 0;
+  }
+ }
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1;
+
+  .center {
+    display: block;
+    text-align: center;
+  }
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(2.3);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h1 {
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit;
+    border-bottom: 1px solid $brand-color;
+    @include relative-font-size(1.9);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h2 {
+    padding: $spacing-unit / 2 0 0 0;
+    @include relative-font-size(1.5);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.5);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.1);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.08);
+    }
+  }
+}
+
+/**
+* TOC
+*/
+#markdown-toc {
+  display: block;
+  margin: 0 0 $spacing-unit 0;
+  padding: $spacing-unit;
+  color: $brand-color;
+  list-style-type: upper-roman;
+  border-bottom: 2px solid $brand-color;
+
+  ul {
+    list-style-type: decimal;
+    
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  a {
+    color: $brand-color;
+  }
+}
